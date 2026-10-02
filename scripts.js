@@ -44,4 +44,13 @@ function checkAnswer(){
 
 function playAgain(){
     score = 0;
+
+    document.getElementById("score").textContent = score;
+    document.getElementById("message").textConent = "";
+    document.getElementById("div-questions").style.display = "block";
+    document.getElementById("div-success").style.display = "none";
+
+        generateQuestion();
 }
+
+generateQuestion();
