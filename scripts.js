@@ -33,4 +33,15 @@ function checkAnswer(){
         message.textContent = "Incorrect! Correct answer is " + correctAnswer + ".";
         message.style.color = "red";
     }
+
+    if (score === 5){
+    document.getElementById("div-quiestions").style.display = "none";
+    document.getElementById("div-success").style.display = "block";
+    } else {
+        generateQuestion();
+    }
+}
+
+function playAgain(){
+    score = 0;
 }
