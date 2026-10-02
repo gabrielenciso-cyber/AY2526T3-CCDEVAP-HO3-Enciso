@@ -16,6 +16,7 @@ function generateQuestion(){
     } else if(operator === "*") {
         correctAnswer = num1 * num2;
     }
-
     
+    document.getElementById("question").textConent = num1 + " " + operator + " " + num2;
+    document.getElementById("answer").value = " ";
 }
