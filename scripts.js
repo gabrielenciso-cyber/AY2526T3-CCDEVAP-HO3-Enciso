@@ -16,7 +16,21 @@ function generateQuestion(){
     } else if(operator === "*") {
         correctAnswer = num1 * num2;
     }
-    
+
     document.getElementById("question").textConent = num1 + " " + operator + " " + num2;
     document.getElementById("answer").value = " ";
+}
+
+function checkAnswer(){
+    let userAnswer = Number(document.getElemebtById("answer").value);
+    let message = document.getElementById("message");
+
+    if (userAnswer === correctAnswer){
+        score++;
+        message.textContent = "Correct!";
+        message.style.color = "green";
+    } else {
+        message.textContent = "Incorrect! Correct answer is " + correctAnswer + ".";
+        message.style.color = "red";
+    }
 }
